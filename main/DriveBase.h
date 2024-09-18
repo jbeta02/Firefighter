@@ -1,6 +1,4 @@
-#ifndef DriveBase_h // header guard
-
-#define DriveBase_h
+#pragma once // acts as header gaurd
 
 #include <Arduino.h> // include arduino library
 
@@ -8,7 +6,7 @@ class DriveBase {
 
   public:
 
-  void setupMotors(int m1p1, int m1p2, int m2p1, int m2p2, int pwmA, int pwmB);
+  void init(int m1p1, int m1p2, int m2p1, int m2p2, int pwmA, int pwmB);
 
   // move function at set speed
   void moveForward(int speed);
@@ -31,16 +29,14 @@ class DriveBase {
 
   private: 
 
-    int globalSpeed;
+    int globalSpeed = 255;
     
-    int motor1Port1;
-    int motor1Port2;
-    int motor2Port1;
-    int motor2Port2;
+    int motor1Pin1;
+    int motor1Pin2;
+    int motor2Pin1;
+    int motor2Pin2;
 
-    int pwmPort1;
-    int pwmPort2;
+    int pwmPin1;
+    int pwmPin2;
     
 };
-
-#endif

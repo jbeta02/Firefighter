@@ -1,11 +1,15 @@
 #include "Firefighter.h"
 
-void Firefighter::init() {
 
+void Firefighter::init() {
+  // add subsystem init here
+  drive.init(2, 3, 4, 5, 10, 11);
+
+  // add ultrasonic, IR, ect init here
 }
 
-void Firefighter::lookForRoom() {
-
+void Firefighter::lookForJunc() {
+  
 }
 
 void Firefighter::scanRoom() {

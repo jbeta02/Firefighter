@@ -1,44 +1,30 @@
 #include "DriveBase.h"
 
 // create subsystem instances (drive, ultrasonic, ect)
-DriveBase drive;
+DriveBase testDrive;
 
 void setup() {
   // put your setup code here, to run once:
   
-  drive.setupMotors(2, 3, 4, 5, 10, 11);
+  testDrive.init(2, 3, 4, 5, 10, 11); // setup motor pin locations
 
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
 
-  drive.setGlobalSpeed(255);
+  testDrive.setGlobalSpeed(255);
 
-  drive.moveForward();
+  testDrive.moveForward();
   stopPause(1000);
-  // drive.turnRight();
-  // stopPause(1000);
-
-  // drive.moveForward();
-  // stopPause(1000);
-  // drive.turnRight();
-  // stopPause(1000);
-
-  // drive.moveForward();
-  // stopPause(1000);
-  // drive.turnRight();
-  // stopPause(1000);
-
-  // drive.moveForward();
-  // stopPause(1000);
-  // drive.turnRight();
+  // testDrive.turnRight();
   // stopPause(1000);
 
 }
 
+// only used for testing
 void stopPause(int time) {
   delay(time);
-  drive.stop();
+  testDrive.stop();
   delay(time);
 }
